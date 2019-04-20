@@ -17,7 +17,14 @@ public class Sandwich {
     public Sandwich() {
     }
 
-    public Sandwich(String mainName, List<String> alsoKnownAs, String placeOfOrigin, String description, String image, List<String> ingredients) {
+    public Sandwich(
+            String mainName,
+            List<String> alsoKnownAs,
+            String placeOfOrigin,
+            String description,
+            String image,
+            List<String> ingredients
+    ) {
         this.mainName = mainName;
         this.alsoKnownAs = alsoKnownAs;
         this.placeOfOrigin = placeOfOrigin;
