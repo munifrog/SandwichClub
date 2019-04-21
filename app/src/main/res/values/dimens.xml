@@ -5,4 +5,7 @@
     <dimen name="activity_horizontal_padding">16dp</dimen>
     <dimen name="activity_vertical_padding">16dp</dimen>
     <dimen name="activity_indent_01">32dp</dimen>
+    <dimen name="activity_list_size">24sp</dimen>
+    <dimen name="activity_label_size">28sp</dimen>
+    <dimen name="activity_pith_size">24sp</dimen>
 </resources>
