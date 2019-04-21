@@ -16,7 +16,6 @@ import com.udacity.sandwichclub.utils.JsonUtils;
 import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
-    String TAG = DetailActivity.class.getSimpleName();
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
@@ -53,14 +52,18 @@ public class DetailActivity extends AppCompatActivity {
 
         populateUI();
 
+        // This block mostly comes from the following website
+        // http://www.zoftino.com/android-picasso-image-downloading-and-caching-library-tutorial
+        // Note that the reference to ".get()" before ".load(...)" needed to be removed, to work
         Picasso.Builder picassoBuilder = new Picasso.Builder(this).listener(new Picasso.Listener() {
             @Override
             public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception) {
                 ImageView ingredientsIv = findViewById(R.id.image_iv);
+                // The way to hide the ImageView came from this site
+                // https://stackoverflow.com/questions/42048880/how-to-hide-imageview
                 ingredientsIv.setVisibility(View.GONE);
             }
         });
-
         Picasso picasso = picassoBuilder.build();
         picasso .load(mSandwich.getImage())
                 .into(ingredientsIv);

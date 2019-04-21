@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // The instructions for defining the size of ListView elements came from the answer here
+        // https://stackoverflow.com/questions/4533440/android-listview-text-color
         String[] sandwiches = getResources().getStringArray(R.array.sandwich_names);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 R.layout.list_view_item, R.id.list_view_item, sandwiches);
