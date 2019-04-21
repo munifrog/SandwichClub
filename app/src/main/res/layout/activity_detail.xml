@@ -1,59 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
-    <ImageView
-        android:id="@+id/image_iv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_also_known_as_label"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/activity_vertical_padding"/>
+        <TextView
+            android:id="@+id/also_known_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_indent_01"
+            android:paddingRight="@dimen/activity_indent_01"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_place_of_origin_label"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_ingredients_label"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/activity_vertical_padding"/>
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_indent_01"
+            android:paddingRight="@dimen/activity_indent_01"/>
 
-    <TextView
-        android:id="@+id/description_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/activity_vertical_padding"/>
+        <TextView
+            android:id="@+id/origin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_indent_01"
+            android:paddingRight="@dimen/activity_indent_01"/>
 
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_description_label"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/activity_vertical_padding"/>
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_indent_01"
+            android:paddingRight="@dimen/activity_indent_01"
+            android:paddingBottom="@dimen/activity_vertical_padding"/>
 
-    <TextView
-        android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_description_label"
-        android:textStyle="bold" />
-</FrameLayout>
+    </LinearLayout>
+</ScrollView>
