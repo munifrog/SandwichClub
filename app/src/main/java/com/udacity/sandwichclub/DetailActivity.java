@@ -58,14 +58,15 @@ public class DetailActivity extends AppCompatActivity {
         Picasso.Builder picassoBuilder = new Picasso.Builder(this).listener(new Picasso.Listener() {
             @Override
             public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception) {
-                ImageView ingredientsIv = findViewById(R.id.image_iv);
+                //ImageView ingredientsIv = findViewById(R.id.image_iv);
                 // The way to hide the ImageView came from this site
                 // https://stackoverflow.com/questions/42048880/how-to-hide-imageview
-                ingredientsIv.setVisibility(View.GONE);
+                //ingredientsIv.setVisibility(View.GONE);
             }
         });
         Picasso picasso = picassoBuilder.build();
         picasso .load(mSandwich.getImage())
+                .placeholder(R.drawable.cutting_board)
                 .into(ingredientsIv);
 
         setTitle(mSandwich.getMainName());
